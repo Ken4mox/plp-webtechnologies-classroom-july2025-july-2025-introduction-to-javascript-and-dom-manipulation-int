@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mastering JavaScript Fundamentals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="JS basics, functions, loops, and DOM manipulation — all in one small project." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <h1>Mastering JavaScript Fundamentals</h1>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="#basics">Basics</a></li>
+        <li><a href="#functions">Functions</a></li>
+        <li><a href="#loops">Loops</a></li>
+        <li><a href="#dom">DOM</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Part 1: Basics -->
+    <section id="basics" class="card" aria-labelledby="basics-title">
+      <h2 id="basics-title">Part 1 - JavaScript Basics</h2>
+      <p>Enter your name and age. We’ll use variables, operators, and conditionals to respond.</p>
+
+      <form id="basicsForm" class="form" action="javascript:void(0);" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Amina" required />
+        </div>
+        <div class="field">
+          <label for="age">Age</label>
+          <input id="age" name="age" type="number" min="0" placeholder="18" required />
+        </div>
+        <div class="actions">
+          <button class="btn" id="btnBasics">Greet & Check Age</button>
+        </div>
+      </form>
+
+      <div id="basicsOutput" class="output" aria-live="polite"></div>
+    </section>
+
+    <!-- Part 2: Functions -->
+    <section id="functions" class="card" aria-labelledby="functions-title">
+      <h2 id="functions-title">Part 2 - Functions (Reusable Logic)</h2>
+      <p>We’ll calculate a total with tax and format strings with reusable functions.</p>
+
+      <form id="totalForm" class="form" action="javascript:void(0);" novalidate>
+        <div class="grid-3">
+          <div class="field">
+            <label for="price1">Item 1 (KSh)</label>
+            <input id="price1" type="number" min="0" step="0.01" placeholder="1200" />
+          </div>
+          <div class="field">
+            <label for="price2">Item 2 (KSh)</label>
+            <input id="price2" type="number" min="0" step="0.01" placeholder="750" />
+          </div>
+          <div class="field">
+            <label for="price3">Item 3 (KSh)</label>
+            <input id="price3" type="number" min="0" step="0.01" placeholder="300" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="tax">Tax (%)</label>
+          <input id="tax" type="number" min="0" max="100" step="0.01" value="16" />
+        </div>
+
+        <div class="actions">
+          <button class="btn" id="btnTotal">Calculate Total</button>
+        </div>
+      </form>
+
+      <div id="totalOutput" class="output" aria-live="polite"></div>
+    </section>
+
+    <!-- Part 3: Loops -->
+    <section id="loops" class="card" aria-labelledby="loops-title">
+      <h2 id="loops-title">Part 3 - Loops</h2>
+      <p>Generate a list from an array and run a countdown using loops.</p>
+
+      <div class="actions">
+        <button class="btn btn-outline" id="btnGenerateList">Generate Tech List</button>
+        <button class="btn" id="btnCountdown">Start Countdown (5 → 0)</button>
+      </div>
+
+      <ul id="listOutput" class="list"></ul>
+      <div id="countdownOutput" class="output" aria-live="polite"></div>
+    </section>
+
+    <!-- Part 4: DOM -->
+    <section id="dom" class="card" aria-labelledby="dom-title">
+      <h2 id="dom-title">Part 4 - DOM Manipulation</h2>
+      <p>Toggle theme, add/remove cards, and update content dynamically.</p>
+
+      <div class="actions">
+        <button class="btn" id="btnToggleTheme" aria-pressed="false">Toggle Theme</button>
+        <button class="btn btn-outline" id="btnAddCard">Add Card</button>
+        <button class="btn btn-danger" id="btnRemoveCard">Remove Last Card</button>
+      </div>
+
+      <section class="cards" id="cardGrid" aria-label="Dynamic cards"></section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <time datetime="2025">2025</time> Kennedy Asiago - JS Fundamentals Demo</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
